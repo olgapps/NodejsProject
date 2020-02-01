@@ -1,0 +1,49 @@
+html
+    head
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+        .home.dog-app
+            header.app-header
+                .logo
+                    //img.logo__icon(src="../public/img/logo.png")
+                    img.logo__icon(src="logo.png")
+                    span.logo__text node js
+                nav.app-nav
+                    ul.app-nav__list
+                        li.app-nav__list-item
+                            a.app-nav__link.app-nav__link--is-active(href="#") home
+                        li.app-nav__list-item
+                            a.app-nav__link(href="#") learn node.js
+                        li.app-nav__list-item
+                            a.app-nav__link(href="#")  contact
+            .wrapper
+                section.slogan
+                    h1.slogan__header
+                        | Be a Master of Node js.
+                    p.slogan__text
+                        | You want to learn node js to pass a subject. You are in the right place. You will learn node js from sratch
+                    .actions
+                        button.btn.btn--primary(@click="formLightbox = true") Like
+                footer.app-footer
+                    | Olga Pietrzyk & Mateusz Mandecki
+        h1.slogan__header
+            |send us a message
+        p.slogan__text
+            form.lightbox__form(action="/applications" method="POST")
+                        .lightbox__form-control
+                            label.lightbox__label What's your name?
+                            input.lightbox__input(placeholder="Ana" type="text" name="name")
+                        .lightbox__form-control
+                            label.lightbox__label What's your phone number?
+                            input.lightbox__input(placeholder="+ 48 111 000 000" type="text" name="phone")
+                        .lightbox__form-control
+                            label.lightbox__label Leave a message
+                            textarea.lightbox__input(placeholder="Your suggestions or" rows="3" name="message")
+                        .lightbox__actions
+                            button.btn.btn--primary Send us a message
+            
+
+
+        script(src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript")
+        script(src="/js/app.js")
